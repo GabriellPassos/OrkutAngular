@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ColunaPerfilComponent } from './componentes/coluna-perfil/coluna-perfil.component';
+import { HomeComponent } from './componentes/paginas/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColunaPerfilComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
