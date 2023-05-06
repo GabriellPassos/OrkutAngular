@@ -1,0 +1,51 @@
+.info-container{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 530px;
+    background-color: white;
+    border-radius: 5px 50px 5px 5px;
+    padding: 15px 20px;
+    box-shadow: 2px 1px 3px #b3bfd0;
+  
+}
+hr{
+    margin: 10px auto;
+}
+.subnick{
+    width: 95%;
+    height: 21px;
+    margin:15px 0;
+    border: .1px solid #dce5ec;
+}
+.subnick:focus{
+    outline:#dce5ec ;
+}
+.icones{
+    display: flex;
+    align-items: center;
+
+}
+.icones img{
+    margin-right: 2px;
+}
+.icones div{
+    margin-right: 10px;
+}
+.geral{
+    display: flex;
+}
+.status{
+    display: flex;
+}
+.detalhes{
+
+}
+.detalhes span{ 
+    font-weight: normal;
+}
+.detalhes p{
+    color: black;
+    font-size: .75rem;
+    font-weight: bold;
+}

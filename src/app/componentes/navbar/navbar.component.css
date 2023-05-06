@@ -1,0 +1,29 @@
+.navbar-container{
+    width: 100vw;
+    height: 40px;
+    background-image: linear-gradient(#5888c6, #759dd0, #5888c6);
+    background-color: #5888c6;
+    
+}
+.logo-moldura{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    height: 100%;
+    width: 90px;
+    background-image: linear-gradient(180deg, white, #c8d1d8);
+    background-color: white;
+}
+.logo-moldura img {
+    padding-right: 5px;
+}
+.logo-moldura p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+    width: 1px;
+    font-size: .54rem;
+    color:#adb2b6;
+}

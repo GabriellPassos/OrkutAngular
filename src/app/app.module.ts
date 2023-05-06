@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColunaPerfilComponent } from './componentes/coluna-perfil/coluna-perfil.component';
 import { HomeComponent } from './componentes/paginas/home/home.component';
+import { CaixaAmizadesComponent } from './componentes/caixa-amizades/caixa-amizades.component';
+import { PerfilInfoComponent } from './componentes/perfil-info/perfil-info.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColunaPerfilComponent,
-    HomeComponent
+    HomeComponent,
+    CaixaAmizadesComponent,
+    PerfilInfoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
