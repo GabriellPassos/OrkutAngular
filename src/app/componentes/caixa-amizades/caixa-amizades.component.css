@@ -7,10 +7,9 @@ a{
 }
 .amizades-container{
     background-color: white;
-    border-radius: 8px;
     padding: 10px;
+    height: auto;
     max-height: 415px;
-    box-shadow: 2px 1px 3px #b3bfd0;
 }  
 .caixa-amizades{
     display: grid;
@@ -22,16 +21,6 @@ a{
     align-items: center;
     width: 100px;
     height: 120px;
-}
-.moldura-amigo{
-    display: flex;
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 70px;
-    height: 70px;
-    border: 2px solid;
 }
 .amigo .nome{
     margin-top: 10px;

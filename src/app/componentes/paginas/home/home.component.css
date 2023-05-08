@@ -1,14 +1,15 @@
 .home-container{
-    display: grid;
-    max-width:90vw;
-    min-height: 80vh;
-    margin: 0 auto;
-    row-gap: 20px;
-    column-gap: 20px;
     grid-template-columns: auto auto auto;
     grid-template-areas: 
     "perfil info amizades"
-    "perfil info comunidades"
+    "perfil info comunidades";
+
+}
+.home-container * {
+    display: flex;
+    border: 1px solid green;
+    justify-content: center;
+
 }
 .perfil-coluna{
     grid-area: perfil;

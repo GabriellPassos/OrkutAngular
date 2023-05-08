@@ -1,22 +1,24 @@
 .navbar-container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #5380bb;
     width: 100vw;
-    height: 40px;
+    height: 36px;
     background-image: linear-gradient(#5888c6, #759dd0, #5888c6);
     background-color: #5888c6;
-    
 }
 .logo-moldura{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    padding: 0 2px;
+    margin-left: 50px;
     height: 100%;
-    width: 90px;
     background-image: linear-gradient(180deg, white, #c8d1d8);
     background-color: white;
 }
 .logo-moldura img {
-    padding-right: 5px;
+
 }
 .logo-moldura p {
     display: flex;
@@ -26,4 +28,31 @@
     width: 1px;
     font-size: .54rem;
     color:#adb2b6;
+    padding: 5px; 
+}
+.navbar-container nav{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 70px 0px 10px;
+} 
+.navbar-container nav section{
+    display: flex;
+    align-items: center;
+} 
+.navbar-container nav a{
+    margin: 0 5px;
+    color: white;
+    transition: .1s;
+}
+.navbar-container nav p{
+    font-size: .65rem;
+    font-weight: bold;
+    color:#17376a;
+}
+.navbar-container nav a:hover{
+    color: #d4d4d4;
+}
+.search-container{
 }

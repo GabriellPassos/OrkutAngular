@@ -1,0 +1,67 @@
+.messagem-container{
+    width: 800px;
+    margin: 0 auto;
+}
+.messagem-container form{
+    background-color: white;
+    height: auto;
+    padding: 16px 10px 14px 14px;
+    margin-bottom: 15px
+}
+.messagem-container textarea{
+    background-color: white;
+    height: 90px;
+    width: 90%;
+    border: 2px solid #dce5ec;
+    resize: none;
+    padding: 6px;
+}
+.messagem-container textarea:focus{
+    outline:#dce5ec;
+    color:grey;
+}
+.recado{
+    display: flex;
+    position: relative;
+    align-items: start;
+    justify-content: space-between;
+    padding: 10px 6px;
+    background-color: #eff7ff;
+    margin-bottom: 10px;
+}
+.info{
+    width: 85%;
+}
+.detalhes{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+}
+.detalhes section{
+    display: flex;
+    align-items: center;
+}
+.nome{
+    display: flex;
+    font-size: .9rem;
+    font-weight: bold;
+    align-items: center;
+}
+.caixa-recados{
+    background-color: white;
+    padding: 8px;
+}
+.data{
+    color: grey;
+    margin-right: 15px;
+    font-size: .72rem;
+}
+.mensagem{
+    font-size: .8rem;
+    color:black
+}
+.btn-responder{
+    font-size: .8rem;
+}
+

@@ -8,6 +8,8 @@ import { HomeComponent } from './componentes/paginas/home/home.component';
 import { CaixaAmizadesComponent } from './componentes/caixa-amizades/caixa-amizades.component';
 import { PerfilInfoComponent } from './componentes/perfil-info/perfil-info.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { RecadosComponent } from './componentes/paginas/recados/recados.component';
+import { FormMensagemComponent } from './componentes/form-mensagem/form-mensagem.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
     HomeComponent,
     CaixaAmizadesComponent,
     PerfilInfoComponent,
-    NavbarComponent
+    NavbarComponent,
+    RecadosComponent,
+    FormMensagemComponent
   ],
   imports: [
     BrowserModule,

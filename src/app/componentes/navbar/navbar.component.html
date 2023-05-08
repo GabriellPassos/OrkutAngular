@@ -1,6 +1,27 @@
 <div class="navbar-container">
     <div class="logo-moldura">
-        <img src="assets/imagens/orkut-logo.png" height="22px">
+        <img src="assets/imagens/orkut-logov2.png" height="18px">
         <p class="rot270deg">Angular</p>
     </div>
+    <nav>
+        <section>
+            <a routerLink="/">Início</a>
+            <hr class="hr-vertical">
+            <a routerLink="recados">Página de Recados</a>
+            <hr class="hr-vertical">
+            <a>Amigos</a>
+            <hr class="hr-vertical">
+            <a>Comunidades</a>
+        </section>
+        <section>
+            <p>exodia>goku@yahoo.com.br</p>
+            <a>Sair</a>
+            <div class="search-container">
+                <form>
+                    <!--<fa-icon [icon]="faSearch"></fa-icon> -->
+                    <input type="text" placeholder="Ou busque por um momento..."><!-- (input)="search($event)">-->
+                </form>
+            </div>
+        </section>
+    </nav>
 </div>
