@@ -1,5 +1,4 @@
 .messagem-container{
-    width: 800px;
     margin: 0 auto;
 }
 .messagem-container form{
@@ -64,4 +63,15 @@
 .btn-responder{
     font-size: .8rem;
 }
-
+.cabecalho * {
+    margin-top: 10px ;
+}
+.cabecalho h3{
+    padding-bottom: 10px;
+}
+.cabecalho p, a{
+    font-size: .9rem;
+}
+.cabecalho p {
+    color:black;
+}

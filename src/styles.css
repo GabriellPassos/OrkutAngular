@@ -36,6 +36,7 @@ hr{
 .hr-vertical{
     border: none;
     background-color: #7091bd;
+    margin: 0 5px;
     height: 30%;
     width: 1px;
 }
@@ -71,8 +72,16 @@ hr{
 }
 .grid-container{
     display: grid;
-    max-width:85vw;
+    grid-template-columns: 200px 530px 320px;
+    max-width: 85vw;
+    width: fit-content;
     min-height: 100vh;
     margin: 0 auto;
-    border: 1px solid red;
+    column-gap: 10px;
+}
+.bussula{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 30px;
 }

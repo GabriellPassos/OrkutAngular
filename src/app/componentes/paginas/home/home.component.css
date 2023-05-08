@@ -1,15 +1,7 @@
 .home-container{
-    grid-template-columns: auto auto auto;
     grid-template-areas: 
     "perfil info amizades"
     "perfil info comunidades";
-
-}
-.home-container * {
-    display: flex;
-    border: 1px solid green;
-    justify-content: center;
-
 }
 .perfil-coluna{
     grid-area: perfil;

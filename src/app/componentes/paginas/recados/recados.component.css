@@ -1,8 +1,10 @@
 .recados-container{
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: "perfil mensagem mensagem";
 }
-.recados-container * {
-    display: flex;
-    border: 2px solid red;
-    justify-content: center;
+.perfil-coluna{
+    grid-area: perfil;
+}
+.mensagem{
+    grid-area: mensagem;
 }
