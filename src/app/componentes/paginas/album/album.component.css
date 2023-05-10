@@ -1,0 +1,114 @@
+.album-container{
+    grid-template-areas: "perfil album album";
+}
+input[type="radio"]{
+    display: inline;
+}
+.perfil{
+    grid-area: perfil;
+}
+.album{
+    grid-area: album;
+}
+.adicionar-imagem{
+    background-color: white;
+    padding: 10px 10px 4px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.album-info {
+background-color: #eff7ff;
+padding: 0 8px 15px;
+margin-bottom: 6px;
+}
+.album-info label{
+    font-size: .9rem;
+}
+.form-adicionar-fotos{
+
+}
+.album-info div{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 45px;
+}
+#titulo-album, #descricao-album{
+    position: absolute;
+    width: 300px;
+    left: 100px;
+}
+.pre-visualizacao-fotos{
+    display: flex;
+    justify-content: space-between;
+    max-height: 750px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.foto-enviada{
+    display: flex;
+    margin: 10px 0;
+    width: 48%;
+    padding: 6px;
+    background-color: #eff7ff;
+}
+.foto-enviada-detalhes{
+    display: flex;
+    flex-direction: column;
+}
+.foto-enviada-detalhes *{
+    margin:  0 4px;
+}
+.foto-enviada-detalhes textarea{
+    height: 5ch;
+}
+.moldura-foto{
+    display: flex;
+    border: 1px solid grey;
+    padding: 2px;
+    height: 120px;
+    width: fit-content;
+}
+.vitrine {
+    background-color: white;
+    height: 500px;
+    padding: 10px 9px 30px;
+
+}
+.caixa-album{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows:max-content;
+    margin: 0 auto;
+    width: 98%;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}
+.capa-album {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.capa-album section{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 70%;
+}
+.capa-album .album-descricao {
+    font-size: .8rem;
+    margin-top:6px;
+}
+.caixa-album .moldura-foto{
+    height: 170px;
+}
+.capa-album{
+
+}
+.album-descricao{
+    border: 1ps solid;
+}

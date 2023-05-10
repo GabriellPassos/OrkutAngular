@@ -7,17 +7,9 @@
     padding: 16px 10px 14px 14px;
     margin-bottom: 15px
 }
-.messagem-container textarea{
-    background-color: white;
+textarea{
     height: 90px;
     width: 90%;
-    border: 2px solid #dce5ec;
-    resize: none;
-    padding: 6px;
-}
-.messagem-container textarea:focus{
-    outline:#dce5ec;
-    color:grey;
 }
 .recado{
     display: flex;

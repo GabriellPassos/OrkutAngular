@@ -1,67 +1,105 @@
-*{
+* {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
+
 input[type="submit"],
- input[type="file"],
- input[type="button"]{
+input[type="file"],
+input[type="button"],
+input[type="radio"] {
     display: none;
 }
-body{
+
+body {
     background-color: #d9e6f7;
 }
-header{
+
+header {
     margin-bottom: 15px;
 }
-a{
+
+a {
     cursor: pointer;
     text-decoration: none;
 }
-a,p{
+
+a,
+p {
     font-size: .65rem;
-    color:#31499b;
+    color: #31499b;
     transition: .2s;
 }
-a:hover{
-    color:#0280c4;
+
+a:hover {
+    color: #0280c4;
 }
-hr{
+
+hr {
     border: none;
     margin: 8px auto;
     background-color: #dce5ec;
     width: 100%;
     height: 1px;
 }
-.hr-vertical{
+
+ul {
+    list-style: none;
+}
+
+textarea {
+    border: 1px solid #dce5ec;
+    resize: none;
+    padding: 6px;
+}
+
+input[type="text"] {
+    border: 1px solid #dce5ec;
+    height: 2.5ch;
+}
+
+textarea:focus {
+    outline: #dce5ec;
+}
+
+.hr-vertical {
     border: none;
     background-color: #7091bd;
     margin: 0 5px;
     height: 30%;
     width: 1px;
 }
-.rot270deg{
+
+.rot270deg {
     transform: rotate(270deg);
 }
-.btn-simples{
+
+.btn-simples {
     padding: 4px 6px;
     border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px;
     border: 1px solid #dce5ec;
     color: #31499b;
     font-weight: bold;
     font-size: .7rem;
     background-image: linear-gradient(180deg, white, #e8f1f8);
     transition: .2s;
+    width: fit-content;
+    height: fit-content;
 }
-.btn-simples:hover{
+
+.btn-simples:hover {
     background-image: linear-gradient(180deg, #e8f1f8, #e8f1f8);
     color: #0280c4;
 }
-.borda{
+
+.borda {
     box-shadow: 2px 1px 3px #b3bfd0;
     border-radius: 8px;
 }
-.moldura-foto-perfil{
+
+.moldura-foto-perfil {
     display: flex;
     border-radius: 100%;
     justify-content: center;
@@ -70,7 +108,8 @@ hr{
     height: 70px;
     border: 2px solid;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
     grid-template-columns: 200px 530px 320px;
     max-width: 85vw;
@@ -79,7 +118,8 @@ hr{
     margin: 0 auto;
     column-gap: 10px;
 }
-.bussula{
+
+.bussula {
     display: flex;
     justify-content: end;
     align-items: center;

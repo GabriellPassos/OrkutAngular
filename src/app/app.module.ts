@@ -10,6 +10,7 @@ import { PerfilInfoComponent } from './componentes/perfil-info/perfil-info.compo
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { RecadosComponent } from './componentes/paginas/recados/recados.component';
 import { FormMensagemComponent } from './componentes/form-mensagem/form-mensagem.component';
+import { AlbumComponent } from './componentes/paginas/album/album.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormMensagemComponent } from './componentes/form-mensagem/form-mensagem
     PerfilInfoComponent,
     NavbarComponent,
     RecadosComponent,
-    FormMensagemComponent
+    FormMensagemComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

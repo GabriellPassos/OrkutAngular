@@ -1,5 +1,4 @@
 .recados-container{
-
     grid-template-areas: "perfil mensagem mensagem";
 }
 .perfil-coluna{
