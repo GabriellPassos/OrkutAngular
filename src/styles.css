@@ -2,6 +2,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 input[type="submit"],
@@ -53,7 +54,8 @@ textarea {
     padding: 6px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
     border: 1px solid #dce5ec;
     height: 2.5ch;
 }

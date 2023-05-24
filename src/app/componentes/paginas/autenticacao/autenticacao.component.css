@@ -1,0 +1,136 @@
+.autenticao-container{
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr .45fr;
+    grid-template-rows: .1fr .6fr .2fr .1fr;
+    grid-template-areas:
+    "mensagem mensagem"
+    "apresentacao login"
+    "apresentacao registro"
+    "rodape rodape";
+    row-gap: 20px;
+    padding: 35px 30px 0px;
+    border:2px solid red;
+}
+.caixa-mensagem{
+    grid-area: mensagem;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding:5px 10px;
+}
+.caixa-mensagem div{
+    display: flex;
+    align-items: center;
+    background-color: #fcfddf;
+    height: 80%;
+    width: 100%;
+    padding: 5px;
+
+}
+.caixa-mensagem span{
+    font-size: .8rem;
+    color: red;
+    font-weight: bold;
+}
+.caixa-mensagem p{
+    font-size: .8rem;
+    color: black;
+}
+.apresentacao{
+    grid-area: apresentacao;
+    width: 98%;
+    height: 100%;
+    background-color: white;
+}
+.caixa-login{
+    grid-area: login;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+}
+.form-login{
+    display: flex;
+    justify-content: center;
+    height: 97%;
+    width: 98%;
+    padding: 50px 0;
+    background-color: #eaecfc;
+}
+.form-login label{
+    font-size: .8rem;
+}
+.form-login input[type="button"]{
+    display: block;
+    height: 25px;
+    width: 54px;
+    background-image: linear-gradient(180deg, white, #eaecfc);
+    border: 1px solid grey;
+    border-radius: 4px;
+    
+}
+.form-login p{
+    font-size: .9rem;
+    color: black;
+}
+.form-login span{
+    font-weight: bold;
+}
+.form-login li{
+    margin-bottom: 10px;
+}
+
+.caixa-registro{
+    grid-area: registro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.caixa-registro div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 98%;
+    background-color: #eaecfc;
+}
+.caixa-registro p{
+    font-size: .8rem;
+    color: grey;
+    margin-bottom: 8px;
+}
+.caixa-registro a{
+    font-size: .85rem;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.rodape{
+    display: flex;
+    align-items: center;
+    grid-area: rodape;
+    width: 100%;
+    height: 100%;
+
+}
+.rodape div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    background-color: #bdcee8;
+}
+.rodape p{
+    font-size: .75rem;
+    color: black;
+}

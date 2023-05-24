@@ -11,6 +11,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { RecadosComponent } from './componentes/paginas/recados/recados.component';
 import { FormMensagemComponent } from './componentes/form-mensagem/form-mensagem.component';
 import { AlbumComponent } from './componentes/paginas/album/album.component';
+import { AutenticacaoComponent } from './componentes/paginas/autenticacao/autenticacao.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AlbumComponent } from './componentes/paginas/album/album.component';
     NavbarComponent,
     RecadosComponent,
     FormMensagemComponent,
-    AlbumComponent
+    AlbumComponent,
+    AutenticacaoComponent
   ],
   imports: [
     BrowserModule,

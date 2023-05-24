@@ -24,7 +24,8 @@ background-color: #eff7ff;
 padding: 0 8px 15px;
 margin-bottom: 6px;
 }
-.album-info label{
+.album-info label,
+.foto-enviada-detalhes label{
     font-size: .9rem;
 }
 .form-adicionar-fotos{
