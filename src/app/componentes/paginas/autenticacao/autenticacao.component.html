@@ -6,7 +6,15 @@
         </div>
     </div>
     <div class="apresentacao">
-
+        <div>
+            <section>
+                <img src="assets/imagens/orkut-logov2.png">
+                <p class="rot270deg">Angular</p>
+            </section>
+            <p><span>Conecta-se </span>ao seus amigos e familiares usando recados e mensagens instantâneas.</p>
+            <p><span>Conheça </span> novas pessoas através de amigos de seus amigos e comunidades.</p>
+            <p><span>Compartilhe </span>seus fotos e paixões em um só lugar.</p>
+        </div>
     </div>
     <div class="caixa-login">
         <form class="form-login">
@@ -35,7 +43,7 @@
     <div class="caixa-registro">
         <div>
             <p>Ainda não é membro?</p>
-            <a>ENTRAR JÁ</a>
+            <label for="popup-exibir">ENTRAR JÁ</label>
         </div>
     </div>
     <div class="rodape">
@@ -43,4 +51,4 @@
             <p>© 2023 Orkut Angular</p>
         </div>
     </div>
-</div>
+<app-popup-autenticacao (onSubmit)="registro($event)"(onSubmit)="login($event)"></app-popup-autenticacao>

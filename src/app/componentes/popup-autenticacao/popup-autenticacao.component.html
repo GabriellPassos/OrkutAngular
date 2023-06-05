@@ -1,0 +1,63 @@
+<input type="checkbox" name="popup-exibir" id="popup-exibir">
+<div id="popup-autenticacao-container">
+    <div id="pop-up">
+        <input type="radio" name="login-registro-btn" id="login__btn-nova-conta" checked>
+        <input type="radio" name="login-registro-btn" id="login__btn-login">
+        <div id="pop-up-autenticacao__moldura">
+            <div id="login">
+                <form id="login-form" (ngSubmit)="submitLogin()" [formGroup]="loginForm" #formDir="ngForm">
+                    <h2>Login</h2>
+                    <label for="login-form__email">Email</label>
+                    <input formControlName="email" type="text" name="email" id="form-login__email">
+                    <div *ngIf="AvisoValidacaoEmail.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoEmail}}</p>
+                    </div>
+                    <label for="login-form__senha">Senha</label>
+                    <input formControlName="senha" type="password" name="password" id="form-login__senha">
+                    <div *ngIf="AvisoValidacaoSenha.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoSenha}}</p>
+                    </div>
+                    <button type="submit" class="envio__btn">Login</button>
+                </form>
+                <span id="esqueci">Esqueci a senha</span>
+                <label class="btn-next-form" for="login__btn-nova-conta">Crie uma nova conta.</label>
+            </div>
+            <div id="registro">
+                <h2>Registro</h2>
+                <form id="registo-form" (ngSubmit)="submitRegistro()" [formGroup]="registroForm" #formDir="ngForm">
+                    <label for="registro-form__nome">Nome</label>
+                    <input formControlName="nomeUsuario" type="text" name="name" id="registro-form__nome"
+                        placeholder="Insira seu Nome">
+                    <div *ngIf="AvisoValidacaoNome.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoNome}}</p>
+                    </div>
+                    <label for="registro-form__email">Email</label>
+                    <input type="text" name="email" id="registro-form__email" placeholder="Insira seu email"
+                        formControlName="email">
+
+                    <input type="text" formControlName="emailConfirmacao" name="emailtwo"
+                        placeholder="Insira seu email">
+                    <div *ngIf="AvisoValidacaoEmail.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoEmail}}</p>
+                    </div>
+                    <label for="registro-form__senha">Senha</label>
+                    <input type="password" name="password" id="registro-form__senha" placeholder="Insira sua senha"
+                        formControlName="senha">
+                    <input type="password" name="passwordtwo" placeholder="Insira sua senha"
+                        formControlName="senhaConfirmacao">
+                    <div *ngIf="AvisoValidacaoSenha.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoSenha}}</p>
+                    </div>
+                    <label for="registro-form__data">Data de Nascimento</label>
+                    <input formControlName="aniversario" id="registro-form__data" name="birtdaydate" type="date">
+                    <div *ngIf="AvisoValidacaoAniversario.length > 0" class="aviso-campo-invalido">
+                        <p>{{AvisoValidacaoAniversario}}</p>
+                    </div>
+                    <button type="submit" class="envio__btn">Registrar</button>
+                </form>
+                <label class="btn-next-form" for="login__btn-login">Entrar</label>
+            </div>
+        </div>
+    </div>
+    <label for="popup-exibir" id="background-container"></label>
+</div>

@@ -14,7 +14,7 @@ textarea{
 .recado{
     display: flex;
     position: relative;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 10px 6px;
     background-color: #eff7ff;

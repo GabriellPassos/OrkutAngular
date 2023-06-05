@@ -1,0 +1,50 @@
+.perfil-social-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+.perfil-social-container nav{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #dce5ec;
+    height: fit-content;
+}
+.btn-simples-cortado{
+    position: relative;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    height: 23px;
+    margin: 0;
+    margin: 0 11px;
+}
+.form-perfil-social{
+    margin-top: 30px;
+    width: 100%;
+}
+li{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-perfil-social > *, select, input, option{
+    font-size: .8rem;
+    color: grey;
+}
+#btn-social:checked + label{
+    background-image:none;
+    background-color: #83a6cc;
+    color: white;
+}
+.cor-sim{
+    background-color: #ebf8ff;
+
+}
+.cor-nao{
+    background-color: #d8effd;
+}

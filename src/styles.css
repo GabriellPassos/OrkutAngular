@@ -8,7 +8,8 @@
 input[type="submit"],
 input[type="file"],
 input[type="button"],
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
     display: none;
 }
 
@@ -55,7 +56,8 @@ textarea {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="date"] {
     border: 1px solid #dce5ec;
     height: 2.5ch;
 }
@@ -95,7 +97,6 @@ textarea:focus {
     background-image: linear-gradient(180deg, #e8f1f8, #e8f1f8);
     color: #0280c4;
 }
-
 .borda {
     box-shadow: 2px 1px 3px #b3bfd0;
     border-radius: 8px;

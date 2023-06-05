@@ -12,6 +12,11 @@ import { RecadosComponent } from './componentes/paginas/recados/recados.componen
 import { FormMensagemComponent } from './componentes/form-mensagem/form-mensagem.component';
 import { AlbumComponent } from './componentes/paginas/album/album.component';
 import { AutenticacaoComponent } from './componentes/paginas/autenticacao/autenticacao.component';
+import { PopupAutenticacaoComponent } from './componentes/popup-autenticacao/popup-autenticacao.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { InterceptorModule } from './interceptors/interceptor.module';
+import { PerfilSocialComponent } from './componentes/perfil-social/perfil-social.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +29,18 @@ import { AutenticacaoComponent } from './componentes/paginas/autenticacao/autent
     RecadosComponent,
     FormMensagemComponent,
     AlbumComponent,
-    AutenticacaoComponent
+    AutenticacaoComponent,
+    PopupAutenticacaoComponent,
+    PerfilSocialComponent,
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    InterceptorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
