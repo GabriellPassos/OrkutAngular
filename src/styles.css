@@ -28,7 +28,7 @@ a {
 
 a,
 p {
-    font-size: .65rem;
+    font-size: .7rem;
     color: #31499b;
     transition: .2s;
 }
@@ -50,16 +50,18 @@ ul {
 }
 
 textarea {
-    border: 1px solid #dce5ec;
+    border: 1px solid #c1c9cf;
     resize: none;
     padding: 6px;
 }
 
 input[type="text"],
 input[type="password"],
-input[type="date"] {
-    border: 1px solid #dce5ec;
+input[type="date"],
+select, option {
+    border: 1px solid #c1c9cf;
     height: 2.5ch;
+    
 }
 
 textarea:focus {
@@ -121,7 +123,6 @@ textarea:focus {
     margin: 0 auto;
     column-gap: 10px;
 }
-
 .bussula {
     display: flex;
     justify-content: end;

@@ -1,18 +1,30 @@
 <div class="perfil-container borda">
     <div class="moldura-foto">
-        <img src="https://66703.cdn.simplo7.net/static/66703/sku/action-figures-banpresto-grandista-nero-dragon-ball-super-son-goku-instinto-superior-incompleto-banpresto--p-1646681735958.jpg" />
+        <label *ngIf="modoEdicao" for="btn-uploadFotoPerfil"></label>
+        <img
+            src="https://66703.cdn.simplo7.net/static/66703/sku/action-figures-banpresto-grandista-nero-dragon-ball-super-son-goku-instinto-superior-incompleto-banpresto--p-1646681735958.jpg" />
     </div>
     <hr>
-    <p class="nome">Gabriel Silva Passos</p>
-    <p class="orientacao">Sexo:HOmemSexual</p>
-    <p class="local">ArujáSp</p>
+    <form (change)="guardarMudancas()" [formGroup]="perfilColuna" #formDir="ngForm">
+        <input formControlName="fotoPerfil" id="btn-uploadFotoPerfil" name="fotoPerfil" type="file">
+        <input formControlName="nomePerfil"  *ngIf="modoEdicao" type="text">
+    </form>
+    <p *ngIf="!modoEdicao" class="nome">{{nomePerfil}}</p>
+    <p *ngIf="genero">{{relacionamento}}</p>
+    <p *ngIf="genero">{{genero}}</p>
+    <p *ngIf="cidade || estado">{{cidade}}, {{estado}}</p>
     <hr>
     <nav>
-        <a><img src="assets/imagens/editar-perfil.png" alt="" width="12" height="14"/>editar perfil</a>
-        <a><img src="assets/imagens/perfil.png" alt="" width="11" height="14"/>perfil</a>
-        <a routerLink="recados"><img src="assets/imagens/lapis.png" alt="" width="11" height="11"/>recados</a>
-        <a routerLink="album"><img src="assets/imagens/camera.png" alt="" width="13" height="11"/>fotos</a>
-        <a><img src="assets/imagens/depoimentos.png" alt="" width="11" height="10"/>depoimentos</a>
+        <section>
+            <a (click)="exibirPerfilSocial()"><img src="assets/imagens/editar-perfil.png" alt="" width="12"
+                    height="14" />perfil</a>
+            <a *ngIf="!modoEdicao" (click)="editarPerfilSocial()">editar</a>
+            <label *ngIf="modoEdicao" for="btn-editar-perfil-social">salvar</label>
+            <input id="btn-editar-perfil-social" type="button" (click)="enviarAlteracoesPerfil()">
+        </section>
+        <a routerLink="recados"><img src="assets/imagens/lapis.png" alt="" width="11" height="11" />recados</a>
+        <a routerLink="album"><img src="assets/imagens/camera.png" alt="" width="13" height="11" />fotos</a>
+        <a><img src="assets/imagens/depoimentos.png" alt="" width="11" height="10" />depoimentos</a>
     </nav>
     <hr>
 </div>

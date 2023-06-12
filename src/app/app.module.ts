@@ -41,6 +41,7 @@ import { PerfilSocialComponent } from './componentes/perfil-social/perfil-social
     ReactiveFormsModule,
     HttpClientModule,
     InterceptorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

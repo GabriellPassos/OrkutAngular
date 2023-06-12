@@ -3,10 +3,41 @@
 </header>
 <div class="home-container grid-container">
     <div class="perfil-coluna">
-        <app-coluna-perfil></app-coluna-perfil>
+        <app-coluna-perfil 
+        [modoEdicao]="modoEdicao"
+        [nomePerfil]="nomePerfil"
+        [relacionamento]="relacionamento"
+        [genero]="genero"
+        [cidade]="cidade"
+        [estado]="estado"
+        (onLigarModoEdicao)="ligarModoEdicao()" 
+        (onExibirPerfilSocial)="exibirPerfilSocial()"
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        (onSubmit) = "enviarAlteracoesPerfil()"
+        ></app-coluna-perfil>
     </div>
     <div class="perfil-info">
-        <app-perfil-info></app-perfil-info>
+        <app-perfil-info
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        [modoEdicao]="modoEdicao"
+        [nomePerfil]="nomePerfil"
+        [frasePerfil]="frasePerfil"
+         ></app-perfil-info>
+        <app-perfil-social 
+        *ngIf="exibicaoPerfilSocial || modoEdicao" 
+        [modoEdicao]="modoEdicao"
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        [cidade]="cidade"
+        [estado]="estado"
+        [genero]="genero"
+        [relacionamento]="relacionamento"
+        [aniversario]="aniversario"
+        [livros]="livros"
+        [musicas]="musicas"
+        [filmes]="filmes"
+        [frasePerfil]="frasePerfil"
+        [quemSouEu]="quemSouEu"
+        ></app-perfil-social>
     </div>
     <div class="caixa-amizades">
         <app-caixa-amizades></app-caixa-amizades>

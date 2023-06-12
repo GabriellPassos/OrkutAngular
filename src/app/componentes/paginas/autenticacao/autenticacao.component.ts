@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class AutenticacaoComponent implements OnInit {
   constructor(private autenticacaoService: AutenticacaoService, private router: Router) { }
   ngOnInit(): void {
-    //localStorage.setItem("token", "");
+    localStorage.setItem("token", "");
     if (localStorage.getItem("token")) {
       this.router.navigate(["/"]);
     }

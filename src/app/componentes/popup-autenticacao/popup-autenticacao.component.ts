@@ -68,7 +68,6 @@ export class PopupAutenticacaoComponent implements OnInit {
     if(this.loginForm.invalid){
       return;
     }
-    
   }
   submitRegistro() {
     this.onSubmit.emit(this.registroForm);
@@ -76,6 +75,5 @@ export class PopupAutenticacaoComponent implements OnInit {
     if(this.registroForm.invalid){
       return;
     }
-   
   }
 }

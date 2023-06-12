@@ -1,7 +1,10 @@
 <div class="info-container">
-    <h2>Bem vindo, Gabriel</h2>
+    <h2>Bem vindo, {{nomePerfil}}</h2>
     <hr>
-    <input class="subnick" type="text">
+    <form *ngIf="modoEdicao" (change)="guardarMudancas()" [formGroup]="perfilInfo" #formDir="ngForm">
+        <input class="frasePerfil" formControlName="frasePerfil" type="text">
+    </form>
+    <p class="frasePerfil" *ngIf="!modoEdicao">{{frasePerfil}}</p>
     <hr>
     <div class="icones">
         <div class="geral">
@@ -34,18 +37,18 @@
             <div class="confiavel">
                 <p>confiavel</p>
                 <div class="moldura-icone">
-                    <img src="assets/imagens/smilev2.png" width="15" height="14">
-                    <img src="assets/imagens/smilev2.png" width="15" height="14">
-                    <img src="assets/imagens/smilev2.png" width="15" height="14">
+                    <img src="assets/imagens/smilev2.png" width="14" height="13">
+                    <img src="assets/imagens/smilev2.png" width="14" height="13">
+                    <img src="assets/imagens/smilev2.png" width="14" height="13">
                 </div>
 
             </div>
             <div class="legal">
                 <p>legal</p>
                 <div class="moldura-icone">
-                    <img src="assets/imagens/gelov2.png" width="15" height="14">
-                    <img src="assets/imagens/gelov2.png" width="15" height="14">
-                    <img src="assets\imagens\gelo-transpente.png" width="15" height="14">
+                    <img src="assets/imagens/gelov2.png" width="14" height="13">
+                    <img src="assets/imagens/gelov2.png" width="14" height="13">
+                    <img src="assets\imagens\gelo-transpente.png" width="14" height="13">
                 </div>
 
             </div>
@@ -65,5 +68,4 @@
         <p>Seus visitates recentes: <a>aaaaaaaaaaaaaa</a></p>
         <p>Sua sorte do dia: <span>aaaaaaaaaaaaaaa</span></p>
     </div>
-    <app-perfil-social></app-perfil-social>
 </div>

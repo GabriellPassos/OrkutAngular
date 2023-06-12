@@ -1,40 +1,66 @@
 .perfil-social-container{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 5px;
 }
 .perfil-social-container nav{
     position: absolute;
     display: flex;
     width: 100%;
     border-bottom: 1px solid #dce5ec;
-    height: fit-content;
 }
 .btn-simples-cortado{
     position: relative;
-    border-radius: 10px;
+    border-radius: 8px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 0;
     height: 23px;
-    margin: 0;
-    margin: 0 11px;
+    margin: 0 6px;
 }
 .form-perfil-social{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
+    padding: 10px 6px;
 }
 li{
     padding: 5px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.form-perfil-social > *, select, input, option{
     font-size: .8rem;
     color: grey;
+    min-height: 28px;
+}
+li div{
+    width:48%;
+}
+p{
+    color: rgb(119, 119, 119);
+}
+li section{
+    width: 48%;
+    text-align: right;
+    align-items: top;
+}
+textarea {
+    width: 100%;
+    min-height: 10ch;
+    resize: vertical;
+    overflow: hidden;
+}
+select, input, option{
+    background-color: transparent;
+    width: 220px;
+    font-size: .8rem;
+}
+form p{
+    font-size: .72rem;
 }
 #btn-social:checked + label{
     background-image:none;

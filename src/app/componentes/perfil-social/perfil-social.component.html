@@ -1,36 +1,105 @@
-<div class="perfil-social-container">
+<div class="perfil-social-container borda">
     <nav>
-        <input  type="radio" id="btn-social" name="btn-social" checked>
+        <input type="radio" id="btn-social" name="btn-social" checked>
         <label for="btn-social" class="btn-simples-cortado btn-simples">Social</label>
-
     </nav>
-    <form class="form-perfil-social">
+    <form class="form-perfil-social" (change)="guardarMudancas()" [formGroup]="perfilSocialForm" #formDir="ngForm">
         <ul>
+            <li class="cor-nao">
+                <section>
+                    <label>relacionamento:</label>
+                </section>
+                <div>
+                    <select formControlName="relacionamento" *ngIf="modoEdicao" id="uf">
+                        <option>solteiro(a)</option>
+                        <option>casado(a)</option>
+                    </select>
+                    <p *ngIf="!modoEdicao">{{relacionamento}}</p>
+                </div>
+            </li>
+            <li class="cor-sim">
+                <section>
+                    <label for="">gênero:</label>
+                </section>
+                <div>
+                    <select formControlName="genero" *ngIf="modoEdicao" id="uf">
+                        <option>masculino</option>
+                        <option>feminino</option>
+                    </select>
+                    <p *ngIf="!modoEdicao">{{relacionamento}}</p>
+                </div>
 
-            <li class="cor-nao">
-                <label>relacionamento:</label>
-                <select id="uf">
-                    <option></option>
-                </select>
-            </li>
-            <li class="cor-sim">
-                <label for="">aniversário:</label>
-                <input type="date">
-            </li>
-            <li class="cor-sim">
-                <label>cidade:</label>
-                <select id="uf">
-                    <option></option>
-                </select>
             </li>
             <li class="cor-nao">
-                <label>estado:</label>
-                <select id="cidade">
-                    <option></option>
-                </select>
+                <section>
+                    <label>quem sou eu:</label>
+                </section>
+                <div>
+                    <textarea formControlName="quemSouEu" *ngIf="modoEdicao"></textarea>
+                    <p *ngIf="!modoEdicao" class="">{{quemSouEu}}</p>
+                </div>
+            </li>
+
+            <li class="cor-sim">
+                <section>
+                    <label>livro(s):</label>
+                </section>
+                <div>
+                    <input *ngIf="modoEdicao" formControlName="livros" type="text">
+                    <p *ngIf="!modoEdicao">{{livros}}</p>
+                </div>
+            </li>
+            <li class="cor-nao">
+                <section>
+                    <label>musica(s):</label>
+                </section>
+                <div>
+                    <input *ngIf="modoEdicao" formControlName="musicas" type="text">
+                    <p *ngIf="!modoEdicao">{{musicas}}</p>
+                </div>
+            </li>
+            <li class="cor-sim">
+                <section>
+                    <label>filme(s):</label>
+                </section>
+                <div>
+                    <input *ngIf="modoEdicao" formControlName="filmes" type="text">
+                    <p *ngIf="!modoEdicao">{{filmes}}</p>
+                </div>
+            </li>
+            <li class="cor-nao">
+                <section>
+                    <label for="">aniversário:</label>
+                </section>
+                <div>
+                    <p>{{aniversario}}</p>
+                </div>
+            </li>
+            <li class="cor-sim">
+                <section>
+                    <label>estado:</label>
+                </section>
+                <div>
+                    <select *ngIf="modoEdicao" formControlName="estado" name="campoUf" (change)="buscarCidades($event)"
+                        id="uf">
+                        <option *ngFor="let uf of ufs;" [value]="uf.sigla">{{uf.nome}}</option>
+                    </select>
+                    <p *ngIf="!modoEdicao">{{estado}}</p>
+                </div>
+
+            </li>
+            <li class="cor-nao">
+                <section>
+                    <label>cidade:</label>
+                </section>
+
+                <div>
+                    <select *ngIf="modoEdicao" formControlName="cidade" name="campoCidade" id="cidade">
+                        <option *ngFor="let cidade of cidades;" [value]="cidade.nome">{{cidade.nome}}</option>
+                    </select>
+                    <p *ngIf="!modoEdicao">{{cidade}}</p>
+                </div>
             </li>
         </ul>
-
-
     </form>
 </div>
