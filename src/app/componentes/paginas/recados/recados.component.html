@@ -3,10 +3,11 @@
 </header>
 <div class="recados-container grid-container">
     <div class="perfil-coluna">
-        <app-coluna-perfil></app-coluna-perfil>
+        <app-coluna-perfil [usuario]="usuario" [nomeUsuario]="nomeUsuario"></app-coluna-perfil>
     </div>
     <div class="mensagem">
-        <app-form-mensagem></app-form-mensagem>
+        <app-form-mensagem [usuario]="usuario" [recados]="recados"
+            (onEnviarRecado)="novo($event)"></app-form-mensagem>
     </div>
 
 </div>

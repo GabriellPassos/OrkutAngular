@@ -54,3 +54,104 @@ hr{
     align-items: center;
     height: 15px;
 }
+.reverter-linha{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#smile1,
+#smile2,
+#smile3{
+    background-image: url("src/assets/imagens/smile-transparentev2.png");
+    background-size: 14px 13px;
+}
+
+#smile1:hover{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+
+}
+#smile2:hover{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+}
+#smile3:hover{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+}
+#smile2:hover + #smile3{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+}
+#smile1:hover + #smile2{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+}
+#smile1:hover ~ #smile3{
+    background: url("src/assets/imagens/smilev2.png");
+    background-size: 14px 13px;
+}
+
+#sexy1,
+#sexy2,
+#sexy3{
+    background-image: url("src/assets/imagens/coracao-transparentev2.png");
+    background-size: 14px 13px;
+}
+
+#sexy1:hover{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+
+}
+#sexy2:hover{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+}
+#sexy3:hover{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+}
+#sexy2:hover + #sexy3{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+}
+#sexy1:hover + #sexy2{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+}
+#sexy1:hover ~ #sexy3{
+    background: url("src/assets/imagens/coracaov2.png");
+    background-size: 14px 13px;
+}
+#legal1,
+#legal2,
+#legal3{
+    background-image: url("src/assets/imagens/gelo-transparente.png");
+    background-size: 14px 13px;
+}
+
+#legal1:hover{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+
+}
+#legal2:hover{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+}
+#legal3:hover{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+}
+#legal2:hover + #legal3{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+}
+#legal1:hover + #legal2{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+}
+#legal1:hover ~ #legal3{
+    background: url("src/assets/imagens/gelov2.png");
+    background-size: 14px 13px;
+}

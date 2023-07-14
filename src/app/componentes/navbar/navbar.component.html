@@ -7,15 +7,15 @@
         <section>
             <a routerLink="/">Início</a>
             <hr class="hr-vertical">
-            <a routerLink="recados">Página de Recados</a>
+            <a routerLink="/recados/">Página de Recados</a>
             <hr class="hr-vertical">
             <a>Amigos</a>
             <hr class="hr-vertical">
             <a>Comunidades</a>
         </section>
         <section>
-            <p>exodia>goku@yahoo.com.br</p>
-            <a>Sair</a>
+            <p *ngIf="email">{{email}}</p>
+            <a (click)="logOut()">Sair</a>
             <div class="search-container">
                 <form>
                     <!--<fa-icon [icon]="faSearch"></fa-icon> -->

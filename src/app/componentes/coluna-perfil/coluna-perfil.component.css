@@ -10,12 +10,20 @@
 
 }
 .moldura-foto{
+    display: flex;
     position: relative;
-    width: auto;
+    width: 166px;
+    margin: 0 auto;
     max-height: 170px;
+    justify-content: center;
     overflow: hidden;
-    border: 2px solid;
+    border: 2px solid ;
+    width: 100%;
+    height: auto;
+    
 }
+
+
 .moldura-foto label{
     position: absolute;
     width: 100%;

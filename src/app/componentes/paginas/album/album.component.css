@@ -12,7 +12,7 @@ input[type="radio"]{
 }
 .adicionar-imagem{
     background-color: white;
-    padding: 10px 10px 4px;
+    padding: 10px 10px 20px 10px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -67,12 +67,23 @@ margin-bottom: 6px;
 .foto-enviada-detalhes textarea{
     height: 5ch;
 }
-.moldura-foto{
+
+.moldura-foto {
     display: flex;
     border: 1px solid grey;
-    padding: 2px;
-    height: 120px;
-    width: fit-content;
+    height: 190px;
+    width: auto;
+    max-width: 200px;
+    justify-content: center;
+    overflow: hidden;
+}
+.moldura-foto > img{
+    margin: auto;
+}
+.foto-default{
+    opacity: 50%;
+    height: 50px;
+    width: 50px;
 }
 .vitrine {
     background-color: white;
@@ -84,10 +95,10 @@ margin-bottom: 6px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-auto-rows:max-content;
-    margin: 0 auto;
+    margin: 16px auto;
     width: 98%;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 20px;
     
 }
 .capa-album {
@@ -100,16 +111,11 @@ margin-bottom: 6px;
     margin: 0 auto;
     width: 70%;
 }
-.capa-album .album-descricao {
+.capa-album .album-titulo {
     font-size: .8rem;
     margin-top:6px;
 }
 .caixa-album .moldura-foto{
     height: 170px;
 }
-.capa-album{
 
-}
-.album-descricao{
-    border: 1ps solid;
-}

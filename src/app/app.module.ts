@@ -17,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InterceptorModule } from './interceptors/interceptor.module';
 import { PerfilSocialComponent } from './componentes/perfil-social/perfil-social.component';
+import { FotosComponent } from './componentes/paginas/fotos/fotos.component';
+import { AdicionarFotoComponent } from './componentes/adicionar-foto/adicionar-foto.component';
+import { PerfilComponent } from './componentes/paginas/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { PerfilSocialComponent } from './componentes/perfil-social/perfil-social
     AutenticacaoComponent,
     PopupAutenticacaoComponent,
     PerfilSocialComponent,
+    FotosComponent,
+    AdicionarFotoComponent,
+    PerfilComponent
  
   ],
   imports: [

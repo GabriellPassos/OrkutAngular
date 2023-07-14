@@ -1,0 +1,33 @@
+.adicionar-imagem{
+    background-color: white;
+    padding: 10px 10px 20px 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.pre-visualizacao-fotos{
+    display: flex;
+    justify-content: space-between;
+    max-height: 750px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.foto-enviada{
+    display: flex;
+    margin: 10px 0;
+    width: 48%;
+    padding: 6px;
+    background-color: #eff7ff;
+}
+.moldura-foto {
+    display: flex;
+    border: 1px solid grey;
+    height: 190px;
+    width: auto;
+    max-width: 200px;
+    justify-content: center;
+    overflow: hidden;
+}

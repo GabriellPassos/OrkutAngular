@@ -1,0 +1,26 @@
+<div class="adicionar-imagem borda">
+    <form (ngSubmit)=enviarAlbum($event) class="form-adicionar-fotos">
+        <label class="btn-simples" for="btn-adicionar-imagem">adicionar foto</label>
+        <input type="file" multiple (change)="adcionarFoto($event)" id="btn-adicionar-imagem" disabl>
+
+        <div class="pre-visualizacao-fotos">
+            <div *ngFor="let foto of fotosCarregadas; let i = index" class="foto-enviada">
+                <div class="moldura-foto">
+                    <img src="{{previaFotosCarregadas[i]}}">
+                </div>
+                <div class="foto-enviada-detalhes">
+                    <textarea name="{{i}}" placeholder="adicione uma legenda"></textarea>
+                    <span class="campo-texto-foto">
+                        <input type="radio" id="checkbox-capa-album" name="checkbox-capa-album">
+                        <label for="checkbox-capa-album">capa álbum</label>
+                    </span>
+                </div>
+                <label class="btn-simples" for="btn-remover-foto_{{i}}">x</label>
+                <input type="button" value="{{i}}" (click)="removerFotoCarregada($event)"
+                    id="btn-remover-foto_{{i}}">
+            </div>
+        </div>
+        <label *ngIf="previaFotosCarregadas.length > 0"class="btn-simples" for="btn-salvar-album">salvar álbum</label>
+        <input id="btn-salvar-album" type="submit">
+    </form>
+</div>

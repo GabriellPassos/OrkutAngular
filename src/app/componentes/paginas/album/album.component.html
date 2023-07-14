@@ -3,19 +3,19 @@
 </header>
 <div class="album-container grid-container">
     <div class="perfil">
-        <app-coluna-perfil></app-coluna-perfil>
+        <app-coluna-perfil [usuario]="usuario" [nomeUsuario]="nomeUsuario"></app-coluna-perfil>
     </div>
     <div class="album">
-
-        <div class="adicionar-imagem borda">
+        <div *ngIf="!nomeUsuario" class="adicionar-imagem borda">
             <h3>Fotos</h3>
             <label class="btn-simples" for="btn-novo-album">criar álbum</label>
             <input type="button" (click)="exibirCampoNovoAlbum()" id="btn-novo-album" name="btn-novo-album">
-            <form *ngIf="exibirForm" class="form-adicionar-fotos">
+
+            <form (ngSubmit)=enviarAlbum($event) *ngIf="exibirForm" class="form-adicionar-fotos">
                 <div class="album-info">
                     <div>
                         <label for="titulo-album">título:</label>
-                        <input type="text" placeholder=" digite um título" name="titulo-album" id="titulo-album">
+                        <input type="text" placeholder=" digite um título" name="titulo" id="titulo-album">
                     </div>
                     <div>
                         <label for="descricao-album">descrição:</label>
@@ -24,40 +24,56 @@
                     </div>
                 </div>
                 <label class="btn-simples" for="btn-adicionar-imagem">adicionar foto</label>
-                <input type="button" id="btn-adicionar-imagem" name="btn-adicionar-imagem">
+                <input type="file" multiple (change)="adcionarFoto($event)" id="btn-adicionar-imagem" disabl>
+
                 <div class="pre-visualizacao-fotos">
-                    <div class="foto-enviada">
+                    <div *ngFor="let foto of fotosCarregadas; let i = index" class="foto-enviada">
                         <div class="moldura-foto">
-                            <img
-                                src="https://pm1.narvii.com/7188/69dd5c4a7b6e79e2af612adb6b562131cff49b19r1-625-521v2_hq.jpg">
+                            <img src="{{previaFotosCarregadas[i]}}">
                         </div>
                         <div class="foto-enviada-detalhes">
-                            <textarea placeholder="adicione uma legenda"></textarea>
+                            <textarea for="aaa" name="{{i}}" placeholder="adicione uma legenda"></textarea>
                             <span>
                                 <input type="radio" id="checkbox-capa-album" name="checkbox-capa-album">
                                 <label for="checkbox-capa-album">capa álbum</label>
                             </span>
                         </div>
-                        <label class="btn-simples" for="btn-remover-foto">x</label>
-                        <input type="button" name="btn-remover-foto" id="btn-remover-foto">
+                        <label class="btn-simples" for="btn-remover-foto_{{i}}">x</label>
+                        <input type="button" value="{{i}}" (click)="removerFotoCarregada($event)"
+                            id="btn-remover-foto_{{i}}">
                     </div>
                 </div>
+                <label class="btn-simples" for="btn-salvar-album">salvar álbum</label>
+                <input id="btn-salvar-album" type="submit">
             </form>
         </div>
         <div class="vitrine borda">
             <h4>Álbuns</h4>
             <div class="caixa-album">
-                <div class="capa-album">
+                <div *ngFor="let album of albumsCarregados" class="capa-album">
+                    <a routerLink='/album/{{usuario.nomeUsuario}}/{{album.id}}'>
+                        <div class="moldura-foto">
+                            <img *ngIf="album.fotos[0]" src="{{baseApiUrlFoto}}{{album.fotos[0].nomeFoto}}">
+                            <img *ngIf="!album.fotos[0]"  class="foto-default" src="assets\imagens\no-photos.png">
+                        </div>
+                        <p class="album-titulo">{{album.titulo}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="albumParaExibir && !exibirFotos" class="vitrine borda">
+            <h4>{{albumParaExibir.titulo}}</h4>
+            <div class="caixa-album">
+                <div *ngFor="let foto of albumParaExibir" class="capa-album">
                     <div class="moldura-foto">
-                        <img
-                            src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2022/11/08/dragon-ball-z-kai_capa-1ib8sl437lvfm.jpg">
+                        <img src="{{baseApiUrlFoto}}{{foto.nomeFoto}}">
                     </div>
-                    <p class="album-descricao">prontos pra porrada</p>
+                    <p class="album-descricao">{{foto.titulo}}</p>
                     <section>
                         <label class="btn-simples" for="btn-editar">editar</label>
                         <input type="submit" id="btn-editar" name="btn-editar">
-                        <label class="btn-simples" for="btn-cancelar">excluir</label>
-                        <input type="button" id="btn-excluir" name="btn-excluir">
+                        <label class="btn-simples" for="btn-excluir">excluir</label>
+                        <input type="button" id="btn-excluir" value="{{albumParaExibir.id}}" name="btn-excluir">
                     </section>
                 </div>
             </div>

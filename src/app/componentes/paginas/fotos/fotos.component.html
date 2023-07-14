@@ -1,0 +1,45 @@
+<header>
+    <app-navbar></app-navbar>
+</header>
+<div class="fotos-container grid-container">
+    <div class="perfil">
+        <app-coluna-perfil [usuario]="usuario" [nomeUsuario]="nomeUsuario"></app-coluna-perfil>
+    </div>
+    <div class="fotos">
+        <app-adicionar-foto  (onEnviarFotos)="adicionarFoto($event)"></app-adicionar-foto>
+        <div class="vitrine borda">
+            <form class="moldura-cabecalho" >
+                <section>
+                    <h4 *ngIf="!edicaoTitulo">{{album.titulo}}</h4>
+                    <input *ngIf="edicaoTitulo"  type="text" [(ngModel)]="titulo" name="titulo">
+                    <img src="assets/imagens/edit.png" id="btn-editar-titulo" (click)="editarTitulo()" width="12" height="12">
+                </section>
+                <label class="btn-simples excluir-album" for="btn-remover-album">x</label>
+            </form>
+            <input type="button" id="btn-remover-album" (click)="excluirAlbum(album.id)">
+            <hr>
+            <div class="caixa-fotos">
+                <div *ngFor="let foto of album.fotos" class="foto">
+                    <a>
+                        <div class="moldura-foto">
+                            <img src="{{baseApiUrlFoto}}{{foto.nomeFoto}}" (click)="expandir(foto.nomeFoto)">
+                        </div>
+                        <p class="foto-titulo">{{foto.titulo}}</p>
+                        <section>
+                            <label class="btn-simples" for="btn-editar">editar</label>
+                            <input type="button" id="btn-editar" name="btn-editar">
+                            <label class="btn-simples" for="btn-excluir">excluir</label>
+                            <input type="button" id="btn-excluir" value="{{album}}" (click)="excluirFoto(foto.id)"name="btn-excluir">
+                        </section>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="superExibicao" class="super-exibicao">
+        <label (click)="expandir('')"></label>
+        <img class="super-foto" src="{{baseApiUrlFoto}}{{superExibicaoFoto}}">
+    </div>
+
+
+</div>

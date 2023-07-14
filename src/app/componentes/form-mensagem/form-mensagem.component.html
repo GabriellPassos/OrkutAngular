@@ -1,17 +1,17 @@
 <div class="messagem-container">
-    <form class="borda">
-        <textarea name="" id="" placeholder="digite seu recado"></textarea>
+    <form *ngIf="nomeUsuario" class="borda" (ngSubmit)="enviarRecado($event)">
+        <textarea name="mensagem" id="" placeholder="digite seu recado"></textarea>
         <hr>
         <div>
             <label class="btn-simples" for="btn-enviar">enviar recado</label>
             <input name="btn-enviar" id="btn-enviar" type="submit">
             <label class="btn-simples" for="btn-foto">adicionar foto</label>
-            <input name="btn-foto" type="file" id="btn-foto">
+            <input (change)="adicionarFoto($event)" type="file" id="btn-foto">
         </div>
     </form>
     <div class="caixa-recados borda">
         <div class="cabecalho">
-            <h3>Minha página de recados (1)</h3>
+            <h4>Página de recados ({{recados.length}})</h4>
             <label class="btn-simples" for="btn-excluir-select">excluir recados selecionados</label>
             <input type="button" id="btn-excluir-select" name="btn-excluir-select">
             <p>Selecionar: <a>Todos</a>,<a>Nenhum</a></p>
@@ -19,45 +19,43 @@
         <nav class="bussula">
             <a>primeira</a>
             <hr class="hr-vertical">
-            <a>< anterior</a>
-                    <hr class="hr-vertical">
-                    <a>próxima ></a>
-                    <hr class="hr-vertical">
-                    <a>última</a>
+            <a> anterior</a>
+            <hr class="hr-vertical">
+            <a>próxima ></a>
+            <hr class="hr-vertical">
+            <a>última</a>
         </nav>
-        <div class="recado">
-            <input type="checkbox">
-            <div class="moldura-foto-perfil">
-                <img src="https://www.einerd.com.br/wp-content/uploads/2021/01/Pan-Dragon-Ball-capa-890x466.jpg">
-            </div>
-            <div class="info">
-                <div class="detalhes">
-                    <a class="nome">Livia</a>
-                    <section>
-                        <p class="data">14:00 da manh]a</p>
-                        <label class="btn-simples" for="btn-excluir">apagar</label>
-                        <input type="button" id="btn-excluir" name="btn-excluir">
-                    </section>
+        <div class="caixa-recados">
+            <div *ngFor="let recado of recados; index as i" class="recado">
+                <input type="checkbox">
+                <div class="moldura-foto-perfil">
+                    <img *ngIf="recado.fotoPerfil" src="{{baseApiUrlFoto}}{{recado.fotoPerfil}}">
+                    <img *ngIf="!recado.fotoPerfil" src="assets/imagens/perfil.png">
                 </div>
-                <div>
-                    <p class="mensagem">
-                        recado-detalhesrecado-detalhesrecado-detalhesrecado-detalhesrecado-detalhesrecado-detalhesrecado-detalhes
-                        recado-detalhesrecado-detalhesrecado-detalhesrecado-detalhesrecado-detalhes
-                        recado-detalhesrecado-detalhesrecado-detalhesrecado-detalhesrecado-detalhes
-                    </p>
-                    <a class="btn-responder">Responder</a>
+                <div class="info">
+                    <div class="detalhes">
+                        <a routerLink="/perfil/{{recado.nomeUsuario}}" class="nome">{{recado.nomePerfil}}</a>
+                        <section>
+                            <p class="data">{{recado.createdAt}}</p>
+                            <label class="btn-simples" for="btn-excluir">apagar</label>
+                            <input type="button" id="btn-excluir" value="{{i + 1}}" (click)="excluirRecado($event)" name="btn-excluir">
+                        </section>
+                    </div>
+                    <div>
+                        <p class="mensagem">{{recado.mensagem}}</p>
+                        <a class="btn-responder">Responder</a>
+                    </div>
                 </div>
             </div>
         </div>
         <nav class="bussula">
             <a>primeira</a>
             <hr class="hr-vertical">
-            <a>
-                < anterior</a>
-                    <hr class="hr-vertical">
-                    <a>próxima ></a>
-                    <hr class="hr-vertical">
-                    <a>última</a>
+            <a>anterior</a>
+            <hr class="hr-vertical">
+            <a>próxima ></a>
+            <hr class="hr-vertical">
+            <a>última</a>
         </nav>
     </div>
 </div>

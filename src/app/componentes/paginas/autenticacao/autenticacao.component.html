@@ -17,27 +17,26 @@
         </div>
     </div>
     <div class="caixa-login">
-        <form class="form-login">
+        <form (ngSubmit)="login(loginForm)" [formGroup]="loginForm" #formDir="ngForm" class="form-login">
             <ul>
                 <li>
                     <p>Acesse o <span>Orkut Angular</span> com sua conta</p>
                 </li>
                 <li>
                     <label for="login-email">E-mail: </label>
-                    <input type="text" id="login-email" name="login-email">
+                    <input formControlName="email" type="text" id="login-email" >
                 </li>
 
                 <li>
                     <label for="login-senha">Senha: </label>
-                    <input type="password" id="login-senha" name="login-senha">
+                    <input formControlName="senha" type="password" id="login-senha" name="login-senha">
                 </li>
 
                 <li>
-                    <input id="btn-login" name="btn-login" value="Login" type="button">
+                    <input id="btn-login" name="btn-login" value="Login" type="submit">
                 </li>
 
             </ul>
-
         </form>
     </div>
     <div class="caixa-registro">

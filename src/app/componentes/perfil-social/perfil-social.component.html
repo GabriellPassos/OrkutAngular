@@ -14,7 +14,7 @@
                         <option>solteiro(a)</option>
                         <option>casado(a)</option>
                     </select>
-                    <p *ngIf="!modoEdicao">{{relacionamento}}</p>
+                    <p *ngIf="!modoEdicao && relacionamento != 'null'">{{relacionamento}}</p>
                 </div>
             </li>
             <li class="cor-sim">
@@ -26,7 +26,7 @@
                         <option>masculino</option>
                         <option>feminino</option>
                     </select>
-                    <p *ngIf="!modoEdicao">{{relacionamento}}</p>
+                    <p *ngIf="!modoEdicao && genero != 'null'">{{genero}}</p>
                 </div>
 
             </li>
@@ -36,7 +36,7 @@
                 </section>
                 <div>
                     <textarea formControlName="quemSouEu" *ngIf="modoEdicao"></textarea>
-                    <p *ngIf="!modoEdicao" class="">{{quemSouEu}}</p>
+                    <p *ngIf="!modoEdicao && quemSouEu != 'null'" class="">{{quemSouEu}}</p>
                 </div>
             </li>
 
@@ -46,7 +46,7 @@
                 </section>
                 <div>
                     <input *ngIf="modoEdicao" formControlName="livros" type="text">
-                    <p *ngIf="!modoEdicao">{{livros}}</p>
+                    <p *ngIf="!modoEdicao  && livros != 'null'">{{livros}}</p>
                 </div>
             </li>
             <li class="cor-nao">
@@ -55,7 +55,7 @@
                 </section>
                 <div>
                     <input *ngIf="modoEdicao" formControlName="musicas" type="text">
-                    <p *ngIf="!modoEdicao">{{musicas}}</p>
+                    <p *ngIf="!modoEdicao && musicas != 'null'">{{musicas}}</p>
                 </div>
             </li>
             <li class="cor-sim">
@@ -64,7 +64,7 @@
                 </section>
                 <div>
                     <input *ngIf="modoEdicao" formControlName="filmes" type="text">
-                    <p *ngIf="!modoEdicao">{{filmes}}</p>
+                    <p *ngIf="!modoEdicao && filmes != 'null'">{{filmes}}</p>
                 </div>
             </li>
             <li class="cor-nao">
@@ -84,7 +84,7 @@
                         id="uf">
                         <option *ngFor="let uf of ufs;" [value]="uf.sigla">{{uf.nome}}</option>
                     </select>
-                    <p *ngIf="!modoEdicao">{{estado}}</p>
+                    <p *ngIf="!modoEdicao && estado != 'null'">{{estado}}</p>
                 </div>
 
             </li>
@@ -97,7 +97,7 @@
                     <select *ngIf="modoEdicao" formControlName="cidade" name="campoCidade" id="cidade">
                         <option *ngFor="let cidade of cidades;" [value]="cidade.nome">{{cidade.nome}}</option>
                     </select>
-                    <p *ngIf="!modoEdicao">{{cidade}}</p>
+                    <p *ngIf="!modoEdicao && cidade != 'null'">{{cidade}}</p>
                 </div>
             </li>
         </ul>

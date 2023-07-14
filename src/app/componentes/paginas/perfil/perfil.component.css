@@ -1,0 +1,23 @@
+.perfil-container{
+    grid-template-areas: 
+    "perfil info amizades"
+    "perfil info comunidades";
+}
+.perfil-coluna{
+    grid-area: perfil;
+}
+.perfil-info{
+    grid-area: info;
+}
+
+.caixa-amizades{
+    grid-area: amizades;
+}
+.caixa-comunidades{
+    grid-area: comunidades;
+}
+
+footer{
+    height: 200px;
+    background-color: yellow;
+}

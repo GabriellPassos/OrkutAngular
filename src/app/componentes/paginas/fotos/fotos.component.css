@@ -1,0 +1,114 @@
+.fotos-container {
+    grid-template-areas: "perfil album album";
+}
+
+.fotos {
+    grid-area: album;
+}
+
+.vitrine {
+    background-color: white;
+    height: 500px;
+    padding: 10px 9px 30px;
+
+}
+
+.caixa-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: max-content;
+    margin: 16px auto;
+    width: 98%;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+.moldura-foto {
+    display: flex;
+    border: 1px solid grey;
+    height: 190px;
+    width: auto;
+    max-width: 200px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.foto {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.foto section {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.foto-titulo {
+    font-size: .8rem;
+    margin-top: 6px;
+}
+
+.moldura-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+.moldura-cabecalho section{
+    display: flex;
+    align-items: center;
+    margin-left: px;
+}
+.moldura-cabecalho img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.moldura-cabecalho input {
+    font-size: 1rem;
+    font-weight: bold;
+    height: 1.7ch;
+}
+
+.excluir-album {
+    opacity: 20%;
+    font-weight: bolder;
+    border: 2px solid;
+    margin-right: 8px;
+    transition: .4s;
+}
+
+.excluir-album:hover {
+    color: #5E0F0C;
+    opacity: 90%;
+    border: 2px solid #ad1c17;
+    background-image: linear-gradient(180deg, #DE231D, #EB251E);
+}
+.super-exibicao{
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.super-exibicao label{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+}
+.super-foto{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70%;
+    max-height: 70%;
+}

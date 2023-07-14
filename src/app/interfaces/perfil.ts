@@ -1,5 +1,5 @@
 export interface Perfil{
-    fotoPerfil?:string,
+    fotoPerfil?:any,
     nomePerfil:string,
     frasePerfil?:string,
     genero?:string,

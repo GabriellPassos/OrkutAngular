@@ -1,0 +1,37 @@
+<header>
+    <app-navbar [nomeUsuario]="nomeUsuario"></app-navbar>
+</header>
+<div class="perfil-container grid-container">
+    <div class="perfil-coluna">
+        <app-coluna-perfil 
+        [modoEdicao]="modoEdicao"
+        [modoVisitante]="modoVisitante"
+        [exibicaoPerfilSocial]="exibicaoPerfilSocial" 
+        [usuario]="usuario"
+        [nomeUsuario]="nomeUsuario"
+        (onLigarModoEdicao)="ligarModoEdicao()" 
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        (onMudancaFoto)="anexarFotoPerfil($event)"
+        (onSubmit) = "enviarAlteracoesPerfil()"
+        ></app-coluna-perfil>
+    </div>
+    <div class="perfil-info">
+        <app-perfil-info
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        [modoEdicao]="modoEdicao"
+        [usuario]="usuario"
+         ></app-perfil-info>
+        <app-perfil-social 
+        [modoEdicao]="modoEdicao"
+        (onGuardarAlteracao)="guadarAlteracaoRecente($event)"
+        [usuario]="usuario"
+        ></app-perfil-social>
+    </div>
+    <div class="caixa-amizades">
+        <app-caixa-amizades></app-caixa-amizades>
+    </div>
+    <div class="caixa-comunidades"></div>
+</div>
+<footer>
+
+</footer>

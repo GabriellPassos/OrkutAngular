@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OutrosFetchServiceService } from './outros-fetch-service.service';
+import { OutrosFetchServiceService } from './uf-cidade-service.service';
 
 describe('OutrosFetchServiceService', () => {
   let service: OutrosFetchServiceService;

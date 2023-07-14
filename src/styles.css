@@ -107,13 +107,15 @@ textarea:focus {
 .moldura-foto-perfil {
     display: flex;
     border-radius: 100%;
-    justify-content: center;
     overflow: hidden;
     width: 70px;
     height: 70px;
     border: 2px solid;
 }
-
+.moldura-foto-perfil > img{
+    height: auto;
+    width: 100px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: 200px 530px 320px;

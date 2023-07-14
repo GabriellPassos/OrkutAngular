@@ -1,29 +1,33 @@
 <div class="perfil-container borda">
     <div class="moldura-foto">
         <label *ngIf="modoEdicao" for="btn-uploadFotoPerfil"></label>
-        <img
-            src="https://66703.cdn.simplo7.net/static/66703/sku/action-figures-banpresto-grandista-nero-dragon-ball-super-son-goku-instinto-superior-incompleto-banpresto--p-1646681735958.jpg" />
+        <img  *ngIf="!fotoPerfil" src="assets/imagens/perfil.png"/>
+        <img  *ngIf="fotoPerfil" src="{{fotoPerfil}}" />
     </div>
     <hr>
     <form (change)="guardarMudancas()" [formGroup]="perfilColuna" #formDir="ngForm">
-        <input formControlName="fotoPerfil" id="btn-uploadFotoPerfil" name="fotoPerfil" type="file">
-        <input formControlName="nomePerfil"  *ngIf="modoEdicao" type="text">
+        <input id="btn-uploadFotoPerfil" (change)="carregarPrevia($event)" type="file">
+        <input formControlName="nomePerfil" *ngIf="modoEdicao" type="text">
     </form>
     <p *ngIf="!modoEdicao" class="nome">{{nomePerfil}}</p>
-    <p *ngIf="genero">{{relacionamento}}</p>
-    <p *ngIf="genero">{{genero}}</p>
-    <p *ngIf="cidade || estado">{{cidade}}, {{estado}}</p>
+    <p *ngIf="relacionamento != 'null'">{{relacionamento}}</p>
+    <p *ngIf="genero != 'null'">{{genero}}</p>
+    <p *ngIf="cidade != 'null'|| estado != 'null'">{{cidade}}, {{estado}}</p>
     <hr>
     <nav>
+        <a *ngIf="modoVisitante"><img src="assets/imagens/adicionar-perfil.png" alt="" width="12"
+            height="14" />+ amigo</a>
+            <hr>
         <section>
-            <a (click)="exibirPerfilSocial()"><img src="assets/imagens/editar-perfil.png" alt="" width="12"
+            <a routerLink='/perfil/{{nomeUsuario}}' ><img src="assets/imagens/editar-perfil.png" alt="" width="12"
                     height="14" />perfil</a>
-            <a *ngIf="!modoEdicao" (click)="editarPerfilSocial()">editar</a>
+                    
+            <a *ngIf="!modoEdicao && exibicaoPerfilSocial" (click)="editarPerfilSocial()">editar</a>
             <label *ngIf="modoEdicao" for="btn-editar-perfil-social">salvar</label>
             <input id="btn-editar-perfil-social" type="button" (click)="enviarAlteracoesPerfil()">
         </section>
-        <a routerLink="recados"><img src="assets/imagens/lapis.png" alt="" width="11" height="11" />recados</a>
-        <a routerLink="album"><img src="assets/imagens/camera.png" alt="" width="13" height="11" />fotos</a>
+        <a routerLink="/recados/{{nomeUsuario}}"><img src="assets/imagens/lapis.png" alt="" width="11" height="11" />recados</a>
+        <a routerLink="/album/{{nomeUsuario}}"><img src="assets/imagens/camera.png" alt="" width="13" height="11" />fotos</a>
         <a><img src="assets/imagens/depoimentos.png" alt="" width="11" height="10" />depoimentos</a>
     </nav>
     <hr>
