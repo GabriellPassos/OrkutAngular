@@ -1,6 +1,9 @@
 #  Orkut Angular
 ## Sobre o projeto
-  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade da dificuldade de implementação das tecnologias atuais do mercado afim construir de forma rápida e competente um. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS. [Respositório back-end](https://github.com/GabriellPassos/APIREST-OrkutAngular)
+  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade de como seria a implementação das tecnologias atuais do mercado afim construir de forma rápida e competente uma rede social. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS. 
+<br>
+ - [Orkut Angular](https://gabriellpassos.github.io/OrkutAngular/)
+ - [Respositório back-end](https://github.com/GabriellPassos/APIREST-OrkutAngular)
   
 ### Página de autenticação
 ![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
@@ -48,7 +51,7 @@ $ npm start
 ## Front end web
 Pré-requisitos: npm
 ```bash
-# clone o repositório da
+# clone o repositório da aplicação
 
 gh repo clone GabriellPassos/OrkutAngular
 
@@ -56,11 +59,11 @@ gh repo clone GabriellPassos/OrkutAngular
 
 $ ng Serve
 
-#página rodando em: http://localhost:4200/
+#página rodará em: http://localhost:4200/
 ```
 
 # Autor
 
-Gabriel Silva Passos
-[Linkedin](https://www.linkedin.com/in/gabrielsilvapassos/)
+
+[Gabriel Silva Passos](https://www.linkedin.com/in/gabrielsilvapassos/)
 
