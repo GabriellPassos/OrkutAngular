@@ -1,6 +1,6 @@
 #  Orkut Angular
 ## Sobre o projeto
-  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade de como seria a implementação das tecnologias atuais do mercado afim construir de forma rápida e competente uma rede social. Seu visual foi montado em AngularJS e seu processamento de dados com a biblioteca Express no NodeJS. 
+  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade de como seria a implementação das tecnologias atuais do mercado afim construir de forma rápida e competente uma rede social. Seu visual foi montado em AngularJS e seu processamento de dados com o framework Express no NodeJS. 
 <br>
  - [Orkut Angular](https://gabriellpassos.github.io/OrkutAngular/)
  - [Respositório back-end](https://github.com/GabriellPassos/APIREST-OrkutAngular)
