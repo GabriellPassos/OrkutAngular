@@ -1,17 +1,16 @@
 #  Orkut Angular
 ## Sobre o projeto
-  Este é um clone do saudoso orkut, antiga rede social. Projeto desenvolvido com fins de estudo.
-
+  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade da dificuldade de implementação das tecnologias atuais do mercado afim construir de forma rápida e competente um. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS.
+  
+### Página de autenticação
+![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
 ### Página de perfil
 ![pagina perfil](https://github.com/GabriellPassos/assets/blob/main/orkutangular/markzuk.PNG) 
+### Album de fotos
+  
 ![pagina album](https://github.com/GabriellPassos/assets/blob/main/orkutangular/album.PNG)
-
-## Layout web
 ![pagina de fotos](https://github.com/GabriellPassos/assets/blob/main/orkutangular/foto.PNG)
-
-![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
-
-## Modelo conceitual
+### Página de recados
 ![pagina de recados](https://github.com/GabriellPassos/assets/blob/main/orkutangular/recados.PNG)
 
 # Tecnologias utilizadas
@@ -30,12 +29,12 @@
 # Como executar o projeto
 
 ## Back end
-Pré-requisitos: Java 11
+![environment](https://github.com/GabriellPassos/assets/blob/main/orkutangular/environment.PNG)
 
 ```bash
 # clonar repositório
 git clone https://github.com/devsuperior/sds1-wmazoni
-
+#abra o pro
 # entrar na pasta do projeto back end
 cd backend
 
