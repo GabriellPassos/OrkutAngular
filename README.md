@@ -1,6 +1,6 @@
 #  Orkut Angular
 ## Sobre o projeto
-  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade da dificuldade de implementação das tecnologias atuais do mercado afim construir de forma rápida e competente um. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS.
+  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade da dificuldade de implementação das tecnologias atuais do mercado afim construir de forma rápida e competente um. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS. [Respositório back-end](https://github.com/GabriellPassos/APIREST-OrkutAngular)
   
 ### Página de autenticação
 ![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
@@ -29,34 +29,34 @@
 # Como executar o projeto
 
 ## Back end
-![environment](https://github.com/GabriellPassos/assets/blob/main/orkutangular/environment.PNG)
-
+Pré-requisitos: npm
 ```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-#abra o pro
-# entrar na pasta do projeto back end
-cd backend
+# clone o repositório da APIREST
 
-# executar o projeto
-./mvnw spring-boot:run
+gh repo clone GabriellPassos/APIREST-OrkutAngular
+
+#localize o arquivo environment
+
+#altere com suas informações de conexão com banco de dados(HOST, USER, PASS)
 ```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
+![environment](https://github.com/GabriellPassos/assets/blob/main/orkutangular/environment.PNG)
 ```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+# execute o servidor
 
-# entrar na pasta do projeto front end web
-cd front-web
+$ npm start
+```
+## Front end web
+Pré-requisitos: npm
+```bash
+# clone o repositório da
 
-# instalar dependências
-yarn install
+gh repo clone GabriellPassos/OrkutAngular
 
-# executar o projeto
-yarn start
+#execute o projeto
+
+$ ng Serve
+
+#página rodando em: http://localhost:4200/
 ```
 
 # Autor
