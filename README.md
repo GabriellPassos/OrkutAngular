@@ -31,7 +31,7 @@
 
 # Como executar o projeto
 
-## Back end
+### Back-End
 Pré-requisitos: npm
 ```bash
 # clone o repositório da APIREST
@@ -48,7 +48,7 @@ gh repo clone GabriellPassos/APIREST-OrkutAngular
 
 $ npm start
 ```
-## Front end web
+### Front-End
 Pré-requisitos: npm
 ```bash
 # clone o repositório da aplicação
