@@ -51,7 +51,8 @@ textarea{
     font-size: .8rem;
     color:black;
     min-height: 36px;
-    
+    word-wrap: break-word;
+    white-space: pre-line;
 }
 .btn-responder{
     font-size: .8rem;

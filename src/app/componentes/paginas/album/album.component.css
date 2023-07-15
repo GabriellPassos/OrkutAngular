@@ -78,7 +78,8 @@ margin-bottom: 6px;
     overflow: hidden;
 }
 .moldura-foto > img{
-    margin: auto;
+    height: 100%;
+    width: auto;
 }
 .foto-default{
     opacity: 50%;
