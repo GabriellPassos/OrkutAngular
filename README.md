@@ -3,7 +3,7 @@
   Este é um clone do saudoso orkut, antiga rede social. Projeto desenvolvido com fins de estudo.
 
 ### Página de perfil
-![pagina perfil]() 
+![pagina perfil](https://github.com/GabriellPassos/assets/blob/main/orkutangular/markzuk.PNG) 
 ![pagina album](https://github.com/GabriellPassos/assets/blob/main/orkutangular/album.PNG)
 
 ## Layout web
