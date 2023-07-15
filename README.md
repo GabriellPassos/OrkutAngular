@@ -1,27 +1,66 @@
-# AngularOrkut
+#  Orkut Angular
+## Sobre o projeto
+  Este é um clone do saudoso orkut, antiga rede social filiada ao Google. Esse projeto surge da curiosidade da dificuldade de implementação das tecnologias atuais do mercado afim construir de forma rápida e competente um. Seu visual foi montado em AngularJS e processamento de dados com biblioteca express no NodeJS.
+  
+### Página de autenticação
+![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
+### Página de perfil
+![pagina perfil](https://github.com/GabriellPassos/assets/blob/main/orkutangular/markzuk.PNG) 
+### Album de fotos
+  
+![pagina album](https://github.com/GabriellPassos/assets/blob/main/orkutangular/album.PNG)
+![pagina de fotos](https://github.com/GabriellPassos/assets/blob/main/orkutangular/foto.PNG)
+### Página de recados
+![pagina de recados](https://github.com/GabriellPassos/assets/blob/main/orkutangular/recados.PNG)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+# Tecnologias utilizadas
+## Back end
+- NodeJS
+- Express
+- JWT
+- Sequelize
+## Banco de dados
+- MySQL
+## Front end
+- HTML / CSS / JS / TypeScript
+- AngularJS
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Como executar o projeto
 
-## Code scaffolding
+## Back end
+![environment](https://github.com/GabriellPassos/assets/blob/main/orkutangular/environment.PNG)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+# clonar repositório
+git clone https://github.com/devsuperior/sds1-wmazoni
+#abra o pro
+# entrar na pasta do projeto back end
+cd backend
 
-## Build
+# executar o projeto
+./mvnw spring-boot:run
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Front end web
+Pré-requisitos: npm / yarn
 
-## Running unit tests
+```bash
+# clonar repositório
+git clone https://github.com/devsuperior/sds1-wmazoni
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# entrar na pasta do projeto front end web
+cd front-web
 
-## Running end-to-end tests
+# instalar dependências
+yarn install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# executar o projeto
+yarn start
+```
 
-## Further help
+# Autor
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Gabriel Silva Passos
+[Linkedin](https://www.linkedin.com/in/gabrielsilvapassos/)
+
