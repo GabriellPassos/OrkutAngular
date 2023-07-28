@@ -4,7 +4,8 @@
 <br>
  - [Orkut Angular](https://gabriellpassos.github.io/OrkutAngular/)
  - [Respositório back-end](https://github.com/GabriellPassos/APIREST-OrkutAngular)
-  
+
+## :mag_right: Visão geral
 ### Página de autenticação
 ![pagina de autenticacao](https://github.com/GabriellPassos/assets/blob/main/orkutangular/autenticacao.PNG)
 ### Página de perfil
@@ -16,20 +17,20 @@
 ### Página de recados
 ![pagina de recados](https://github.com/GabriellPassos/assets/blob/main/orkutangular/recados.PNG)
 
-# Tecnologias utilizadas
-## Back end
+## :hammer_and_wrench: Tecnologias utilizadas
+### Back end
 - NodeJS
 - Express
 - JWT
 - Sequelize
-## Banco de dados
+### Banco de dados
 - MySQL
-## Front end
+### Front end
 - HTML / CSS / JS / TypeScript
 - AngularJS
 
 
-# Como executar o projeto
+## :rocket: Executando o projeto
 
 ### Back-End
 Pré-requisitos: npm
